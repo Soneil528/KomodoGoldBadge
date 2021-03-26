@@ -1,0 +1,7 @@
+C:\Users\Soneil\Desktop\KomodoCompany\Komodo\Claims_Console\bin\Debug\Claims_Console.exe.config
+C:\Users\Soneil\Desktop\KomodoCompany\Komodo\Claims_Console\bin\Debug\Claims_Console.exe
+C:\Users\Soneil\Desktop\KomodoCompany\Komodo\Claims_Console\bin\Debug\Claims_Console.pdb
+C:\Users\Soneil\Desktop\KomodoCompany\Komodo\Claims_Console\obj\Debug\Claims_Console.csprojAssemblyReference.cache
+C:\Users\Soneil\Desktop\KomodoCompany\Komodo\Claims_Console\obj\Debug\Claims_Console.csproj.CoreCompileInputs.cache
+C:\Users\Soneil\Desktop\KomodoCompany\Komodo\Claims_Console\obj\Debug\Claims_Console.exe
+C:\Users\Soneil\Desktop\KomodoCompany\Komodo\Claims_Console\obj\Debug\Claims_Console.pdb
