@@ -92,6 +92,8 @@ namespace Cafe_Console
             // Get meal price
             Console.WriteLine("Enter what the meal price is:");
             newContent.MealPrice = Console.ReadLine();
+
+            _menuRepo.AddMenuContentToList(newContent);
         }
 
         // View all menu items
