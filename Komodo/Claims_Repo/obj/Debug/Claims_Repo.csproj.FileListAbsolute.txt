@@ -4,3 +4,9 @@ C:\Users\Soneil\Desktop\KomodoGoldBadge\Komodo\Claims_Repo\obj\Debug\Claims_Repo
 C:\Users\Soneil\Desktop\KomodoGoldBadge\Komodo\Claims_Repo\obj\Debug\Claims_Repo.csproj.CoreCompileInputs.cache
 C:\Users\Soneil\Desktop\KomodoGoldBadge\Komodo\Claims_Repo\obj\Debug\Claims_Repo.dll
 C:\Users\Soneil\Desktop\KomodoGoldBadge\Komodo\Claims_Repo\obj\Debug\Claims_Repo.pdb
+C:\Users\xpita\Source\Repos\KomodoGoldBadge\Komodo\Claims_Repo\bin\Debug\Claims_Repo.dll
+C:\Users\xpita\Source\Repos\KomodoGoldBadge\Komodo\Claims_Repo\bin\Debug\Claims_Repo.pdb
+C:\Users\xpita\Source\Repos\KomodoGoldBadge\Komodo\Claims_Repo\obj\Debug\Claims_Repo.csprojAssemblyReference.cache
+C:\Users\xpita\Source\Repos\KomodoGoldBadge\Komodo\Claims_Repo\obj\Debug\Claims_Repo.csproj.CoreCompileInputs.cache
+C:\Users\xpita\Source\Repos\KomodoGoldBadge\Komodo\Claims_Repo\obj\Debug\Claims_Repo.dll
+C:\Users\xpita\Source\Repos\KomodoGoldBadge\Komodo\Claims_Repo\obj\Debug\Claims_Repo.pdb

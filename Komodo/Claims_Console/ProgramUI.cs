@@ -13,9 +13,9 @@ namespace Claims_Console
 
         public void RunClaims()
         {
+            SeedContent();
             ClaimsMenu();
         }
-
 
         // Menu
         private void ClaimsMenu()
@@ -51,6 +51,7 @@ namespace Claims_Console
                     case "4":
                         // Exit menu
                         Console.WriteLine("Bye!");
+                        keepRunning = false;
                         break;
                     default:
                         Console.WriteLine("Please enter a valid option.");
@@ -77,14 +78,6 @@ namespace Claims_Console
                     $"Claim is valid: {content.IsValid}\n");
             }
         }
-
-        //public string ClaimID { get; set; }
-        //public ClaimType TypeOfClaim { get; set; }
-        //public string ClaimDescription { get; set; }
-        //public int ClaimAmount { get; set; }
-        //public DateTime DateOfIncident { get; set; }
-        //public DateTime DateOfClaim { get; set; }
-        //public bool IsValid { get; set; }
 
         // Next claim
         private void NextClaim()
@@ -122,13 +115,41 @@ namespace Claims_Console
             Console.WriteLine("Enter the date of the claim:");
             newContent.DateOfClaim = DateTime.Parse(Console.ReadLine());
 
+            IsClaimValid(newContent.ClaimID)
+
             _claimsContentRepo.AddClaimsContentToList(newContent);
         }
+
+        private bool IsClaimValid(ClaimsContent content)
+        {
+            {   
+                int dateDiff = (content.DateOfClaim.Date - content.DateOfIncident.Date).Days;
+                if (dateDiff <= 30)
+                {
+                    return true;
+                }
+            }
+                return false;
+        }
+        
         
         // Seed Method
         private void SeedContent()
         {
-            ClaimsContent one = new ClaimsContent("1", ClaimType.Car, "Accident on 465", 400, DateTime.(4 / 25 / 18), 4 / 27 / 18, true);
+            ClaimsContent one = new ClaimsContent("1", ClaimType.Car, "Accident on 465.", 400,
+                DateTime.Parse("4 / 25 / 18"), DateTime.Parse("4 / 27 / 18"), false);
+            ClaimsContent two = new ClaimsContent("2", ClaimType.Home, "House fire in kitchen.", 4000,
+                DateTime.Parse("4 / 11 / 18"), DateTime.Parse("4 / 12 / 18"), false);
+            ClaimsContent three = new ClaimsContent("3", ClaimType.Theft, "Stolen pancakes.", 4,
+                DateTime.Parse("4 / 27 / 18"), DateTime.Parse("6 / 01 / 18"), false);
+
+            one.IsValid = IsClaimValid(one);
+            two.IsValid = IsClaimValid(two);
+            three.IsValid = IsClaimValid(three);
+
+            _claimsContentRepo.AddClaimsContentToList(one);
+            _claimsContentRepo.AddClaimsContentToList(two);
+            _claimsContentRepo.AddClaimsContentToList(three);
         }
     }
 

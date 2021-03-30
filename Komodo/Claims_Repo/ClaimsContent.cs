@@ -23,7 +23,8 @@ namespace Claims_Repo
         public DateTime DateOfClaim { get; set; }
         public bool IsValid { get; set; }
         public ClaimsContent() { }
-        public ClaimsContent(string claimID, ClaimType type, string claimDescription, int claimAmount, DateTime dateOfIncident, DateTime dateOfClaim, bool isValid)
+        public ClaimsContent(string claimID, ClaimType type, string claimDescription, 
+            int claimAmount, DateTime dateOfIncident, DateTime dateOfClaim, bool isValid)
         {
             ClaimID = claimID;
             TypeOfClaim = type;
