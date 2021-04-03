@@ -1,0 +1,6 @@
+C:\Users\Soneil\source\repos\KomodoGoldBadge2\Komodo\Insurance_Repo\bin\Debug\Insurance_Repo.dll
+C:\Users\Soneil\source\repos\KomodoGoldBadge2\Komodo\Insurance_Repo\bin\Debug\Insurance_Repo.pdb
+C:\Users\Soneil\source\repos\KomodoGoldBadge2\Komodo\Insurance_Repo\obj\Debug\Insurance_Repo.csprojAssemblyReference.cache
+C:\Users\Soneil\source\repos\KomodoGoldBadge2\Komodo\Insurance_Repo\obj\Debug\Insurance_Repo.csproj.CoreCompileInputs.cache
+C:\Users\Soneil\source\repos\KomodoGoldBadge2\Komodo\Insurance_Repo\obj\Debug\Insurance_Repo.dll
+C:\Users\Soneil\source\repos\KomodoGoldBadge2\Komodo\Insurance_Repo\obj\Debug\Insurance_Repo.pdb

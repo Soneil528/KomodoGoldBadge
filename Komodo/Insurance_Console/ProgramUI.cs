@@ -53,6 +53,7 @@ namespace Insurance_Console
                 Console.Clear();
             }
         }
+
         // Add badge
         private void AddBadge()
         {
@@ -165,8 +166,6 @@ namespace Insurance_Console
             _badgesRepo.AddBadge(cafeManager);
             _badgesRepo.AddBadge(claimsAgent);
             _badgesRepo.AddBadge(insuranceManager);
-
-
         }
 
 

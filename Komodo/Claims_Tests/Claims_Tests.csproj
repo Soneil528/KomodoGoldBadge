@@ -49,11 +49,21 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ClaimsContentRepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cafe_Repo\Cafe_Repo.csproj">
+      <Project>{339d487a-90c7-486e-a00d-97d28d504a76}</Project>
+      <Name>Cafe_Repo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Claims_Repo\Claims_Repo.csproj">
+      <Project>{B17B43F8-97C8-4DBD-A355-75EA47CA07BA}</Project>
+      <Name>Claims_Repo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -51,7 +51,6 @@
   <ItemGroup>
     <Compile Include="MenuContentRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MenuContentTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
