@@ -22,17 +22,19 @@ namespace Claims_Repo
         public DateTime DateOfIncident { get; set; }
         public DateTime DateOfClaim { get; set; }
         public bool IsValid { get; set; }
+        public bool ClaimIsDone { get; set; }
         public ClaimsContent() { }
         public ClaimsContent(string claimID, ClaimType type, string claimDescription, 
-            int claimAmount, DateTime dateOfIncident, DateTime dateOfClaim, bool isValid)
+            int claimAmount, DateTime dateOfIncident, DateTime dateOfClaim, bool isValid, bool claimIsDone)
         {
             ClaimID = claimID;
             TypeOfClaim = type;
             ClaimDescription = claimDescription;
-            ClaimAmount = ClaimAmount;
+            ClaimAmount = claimAmount;
             DateOfIncident = dateOfIncident;
             DateOfClaim = dateOfClaim;
             IsValid = isValid;
+            ClaimIsDone = claimIsDone;
         }
     }
 

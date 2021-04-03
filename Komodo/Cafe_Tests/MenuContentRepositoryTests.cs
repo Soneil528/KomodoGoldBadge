@@ -6,9 +6,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Cafe_Tests
 {   
     [TestClass]
-    public class UnitTest1
+    public class MenuContentRepositoryTests
     {
-        // Testing Methods AddMenuContentToList & GetMenuContentList
+        // Testing Methods AddMenuContentToList
         [TestMethod]
         public void TestMethod1_AddMenuContentToList()
         {
@@ -26,20 +26,20 @@ namespace Cafe_Tests
             // Assert
             Assert.AreEqual(expected, acutual);
         }
-        [TestMethod]
-        public void MyTestMethod_RemoveMenuContentFromList()
-        {
-            // Arrange
-            MenuContent content = new MenuContent();
-            MenuContentRepository repo = new MenuContentRepository();
-            List<MenuContent> localList = repo.GetMenuContentList();
+        //[TestMethod]
+        //public bool MyTestMethod_RemoveMenuContentFromList()
+        //{
+        //    // Arrange
+        //    MenuContent MealNumber = new MenuContent();
+        //    MenuContentRepository repo = new MenuContentRepository();
+        //    List<MenuContent> localList = repo.GetMenuContentList();
 
-            // Act
-            //int beforeCount = localList.Count;
-            //repo.RemoveMenuContentFromList(content);
-            //int acutual = localList.Count;
-            //int expected = beforeCount + 1;
-            // Assert
-        }
-     }
+        //    // Act
+        //    repo.RemoveMenuContentFromList(MealNumber);
+
+
+        //    // Assert
+
+        //}
+    }
 }

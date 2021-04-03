@@ -66,6 +66,7 @@ namespace Claims_Console
         // Show all claims
         private void DisplayAllClaims()
         {
+            Console.Clear();
             List<ClaimsContent> listOfClaimsContent = _claimsContentRepo.GetClaimsContentsList();
             foreach (ClaimsContent content in listOfClaimsContent)
             {
@@ -75,14 +76,90 @@ namespace Claims_Console
                     $"Amount: {content.ClaimAmount}\n" +
                     $"Incident date: {content.DateOfIncident}\n" +
                     $"Claim date: {content.DateOfClaim}\n" +
-                    $"Claim is valid: {content.IsValid}\n");
+                    $"Claim is valid: {content.IsValid}\n" +
+                    $"Claim is done: {content.ClaimIsDone}\n");
             }
         }
 
         // Next claim
         private void NextClaim()
         {
+            Console.Clear();
 
+            Console.WriteLine("Enter the claim ID number you wish to address next: ");
+            string nextClaim = Console.ReadLine();
+
+            ClaimsContent content = _claimsContentRepo.GetClaimsContentByClaimID(nextClaim);
+
+            Console.WriteLine($"ClaimID: {content.ClaimID}\n" +
+                        $"Type: {content.TypeOfClaim}\n" +
+                        $"Description: {content.ClaimDescription}\n" +
+                        $"Amount: {content.ClaimAmount}\n" +
+                        $"Incident date: {content.DateOfIncident}\n" +
+                        $"Claim date: {content.DateOfClaim}\n" +
+                        $"Claim is valid: {content.IsValid}\n" +
+                        $"Claim is done: {content.ClaimIsDone}\n");
+
+            Console.WriteLine("Do you want to deal with this claim now (y/n)?");
+            string response = Console.ReadLine();
+            response.ToLower();
+            if(response == "y")
+            {
+                bool removeFromQueue = _claimsContentRepo.RemoveClaimContentFromList(nextClaim);
+                if (removeFromQueue)
+                {
+                    Console.WriteLine("The claim has been removed from the queue.");
+                }
+                else
+                {
+                    Console.WriteLine("The claim could not be removed from the queue.");
+                }
+            }
+            else if (response == "n")
+            {
+                ClaimsMenu();
+            }
+            else
+            {
+                Console.WriteLine("Please enter a valid response: ");
+                string respond = Console.ReadLine();
+                respond.ToLower();
+                if (respond == "y")
+                {
+                    bool removeFromQueue = _claimsContentRepo.RemoveClaimContentFromList(nextClaim);
+                    if (removeFromQueue)
+                    {
+                        Console.WriteLine("The claim has been removed from the queue.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("The claim could not be removed from the queue.");
+                    }
+                }
+                else if (respond == "n")
+                {
+                    ClaimsMenu();
+                }
+            }
+        }
+
+        private void UnDoneClaims()
+        {
+            List<ClaimsContent> listOfClaimsContent = _claimsContentRepo.GetClaimsContentsList();
+            foreach (ClaimsContent content in listOfClaimsContent)
+            {
+                if (content.ClaimIsDone == false)
+                {
+                    Console.WriteLine($"ClaimID: {content.ClaimID}\n" +
+                        $"Type: {content.TypeOfClaim}\n" +
+                        $"Description: {content.ClaimDescription}\n" +
+                        $"Amount: {content.ClaimAmount}\n" +
+                        $"Incident date: {content.DateOfIncident}\n" +
+                        $"Claim date: {content.DateOfClaim}\n" +
+                        $"Claim is valid: {content.IsValid}\n" +
+                        $"Claim is done: {content.ClaimIsDone}\n");
+                }
+            }
         }
 
         // Enter a claim
@@ -115,33 +192,37 @@ namespace Claims_Console
             Console.WriteLine("Enter the date of the claim:");
             newContent.DateOfClaim = DateTime.Parse(Console.ReadLine());
 
-            IsClaimValid(newContent.ClaimID)
+            ClaimsContent four = new ClaimsContent("4", newContent.TypeOfClaim, newContent.ClaimDescription, newContent.ClaimAmount, newContent.DateOfIncident,
+                newContent.DateOfClaim, false, false);
 
-            _claimsContentRepo.AddClaimsContentToList(newContent);
+            four.IsValid = IsClaimValid(four);
+
+            _claimsContentRepo.AddClaimsContentToList(four);
         }
 
+        // Checks to see if claim was made within 30 days
         private bool IsClaimValid(ClaimsContent content)
         {
-            {   
+            {
                 int dateDiff = (content.DateOfClaim.Date - content.DateOfIncident.Date).Days;
                 if (dateDiff <= 30)
                 {
                     return true;
                 }
             }
-                return false;
+            return false;
         }
-        
-        
+
+
         // Seed Method
         private void SeedContent()
         {
             ClaimsContent one = new ClaimsContent("1", ClaimType.Car, "Accident on 465.", 400,
-                DateTime.Parse("4 / 25 / 18"), DateTime.Parse("4 / 27 / 18"), false);
+                DateTime.Parse("4 / 25 / 18"), DateTime.Parse("4 / 27 / 18"), false, false);
             ClaimsContent two = new ClaimsContent("2", ClaimType.Home, "House fire in kitchen.", 4000,
-                DateTime.Parse("4 / 11 / 18"), DateTime.Parse("4 / 12 / 18"), false);
+                DateTime.Parse("4 / 11 / 18"), DateTime.Parse("4 / 12 / 18"), false, false);
             ClaimsContent three = new ClaimsContent("3", ClaimType.Theft, "Stolen pancakes.", 4,
-                DateTime.Parse("4 / 27 / 18"), DateTime.Parse("6 / 01 / 18"), false);
+                DateTime.Parse("4 / 27 / 18"), DateTime.Parse("6 / 01 / 18"), false, true);
 
             one.IsValid = IsClaimValid(one);
             two.IsValid = IsClaimValid(two);

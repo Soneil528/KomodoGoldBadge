@@ -25,3 +25,13 @@ C:\Users\xpita\Source\Repos\KomodoGoldBadge\Komodo\Claims_Console\obj\Debug\Clai
 C:\Users\xpita\Source\Repos\KomodoGoldBadge\Komodo\Claims_Console\obj\Debug\Claims_Console.csproj.CopyComplete
 C:\Users\xpita\Source\Repos\KomodoGoldBadge\Komodo\Claims_Console\obj\Debug\Claims_Console.exe
 C:\Users\xpita\Source\Repos\KomodoGoldBadge\Komodo\Claims_Console\obj\Debug\Claims_Console.pdb
+C:\Users\Soneil\Source\Repos\KomodoGoldBadge2\Komodo\Claims_Console\obj\Debug\Claims_Console.csprojAssemblyReference.cache
+C:\Users\Soneil\Source\Repos\KomodoGoldBadge2\Komodo\Claims_Console\obj\Debug\Claims_Console.csproj.CoreCompileInputs.cache
+C:\Users\Soneil\Source\Repos\KomodoGoldBadge2\Komodo\Claims_Console\obj\Debug\Claims_Console.exe
+C:\Users\Soneil\Source\Repos\KomodoGoldBadge2\Komodo\Claims_Console\obj\Debug\Claims_Console.pdb
+C:\Users\Soneil\Source\Repos\KomodoGoldBadge2\Komodo\Claims_Console\bin\Debug\Claims_Console.exe.config
+C:\Users\Soneil\Source\Repos\KomodoGoldBadge2\Komodo\Claims_Console\bin\Debug\Claims_Console.exe
+C:\Users\Soneil\Source\Repos\KomodoGoldBadge2\Komodo\Claims_Console\bin\Debug\Claims_Console.pdb
+C:\Users\Soneil\Source\Repos\KomodoGoldBadge2\Komodo\Claims_Console\bin\Debug\Claims_Repo.dll
+C:\Users\Soneil\Source\Repos\KomodoGoldBadge2\Komodo\Claims_Console\bin\Debug\Claims_Repo.pdb
+C:\Users\Soneil\Source\Repos\KomodoGoldBadge2\Komodo\Claims_Console\obj\Debug\Claims_Console.csproj.CopyComplete

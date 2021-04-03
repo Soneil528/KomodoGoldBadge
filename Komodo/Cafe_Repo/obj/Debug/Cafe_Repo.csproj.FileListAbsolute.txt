@@ -4,3 +4,9 @@ C:\Users\Soneil\Desktop\KomodoCompany\Komodo\Cafe_Repo\bin\Debug\Cafe_Repo.dll
 C:\Users\Soneil\Desktop\KomodoCompany\Komodo\Cafe_Repo\bin\Debug\Cafe_Repo.pdb
 C:\Users\Soneil\Desktop\KomodoCompany\Komodo\Cafe_Repo\obj\Debug\Cafe_Repo.dll
 C:\Users\Soneil\Desktop\KomodoCompany\Komodo\Cafe_Repo\obj\Debug\Cafe_Repo.pdb
+C:\Users\Soneil\Source\Repos\KomodoGoldBadge2\Komodo\Cafe_Repo\bin\Debug\Cafe_Repo.dll
+C:\Users\Soneil\Source\Repos\KomodoGoldBadge2\Komodo\Cafe_Repo\bin\Debug\Cafe_Repo.pdb
+C:\Users\Soneil\Source\Repos\KomodoGoldBadge2\Komodo\Cafe_Repo\obj\Debug\Cafe_Repo.csprojAssemblyReference.cache
+C:\Users\Soneil\Source\Repos\KomodoGoldBadge2\Komodo\Cafe_Repo\obj\Debug\Cafe_Repo.csproj.CoreCompileInputs.cache
+C:\Users\Soneil\Source\Repos\KomodoGoldBadge2\Komodo\Cafe_Repo\obj\Debug\Cafe_Repo.dll
+C:\Users\Soneil\Source\Repos\KomodoGoldBadge2\Komodo\Cafe_Repo\obj\Debug\Cafe_Repo.pdb
